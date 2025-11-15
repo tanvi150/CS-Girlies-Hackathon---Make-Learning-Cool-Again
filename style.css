@@ -1,0 +1,137 @@
+.upload-container h1 {
+    font-family: 'B612', sans-serif;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.upload-container h3 {
+    font-family: 'B612', sans-serif;
+    margin-top: -20px;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #9C9C9C;
+}
+
+.upload-box {
+    border: 2px dashed #999999;
+    padding: 30px;
+    background: #FFF;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.upload-box:hover {
+    border-color: #9B59B6;
+    background: #FDF9FF;
+}
+
+.upload-icon {
+    width: 180px;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.upload-box p {
+    font-family: 'B612', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 200;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.upload-box .highlight {
+    color: #8B41FE;
+}
+
+small {
+    display: block;
+    color: #9C9C9C;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.button-group {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    font-family: 'B612', sans-serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cancel-btn {
+    background: #696969;
+    color: #F5F5F5;
+}
+
+.cancel-btn:hover {
+    background: #5C5C5C;
+}
+
+.attach-btn {
+    background: #974CFF;
+    color: #F5F5F5;
+}
+
+.attach-btn:hover {
+    background: #823DA2;
+}
+
+.upload-box.dragover {
+    border-color: #9B59B6;
+    background: #FDF9FF;
+}
+
+#status-text {
+    margin-left: 150px;
+    color: #000000;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1024) and (max-width: 1600) {
+    .upload-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .upload-container h3 {
+        font-size: 1.1rem;
+        margin-top: -10px;
+    }
+
+    .upload-box {
+        margin-left: 80px;
+        margin-right: 80px;
+        padding: 25px;
+    }
+
+    .upload-icon {
+        width: 150px;
+    }
+
+    .upload-box p {
+        font-size: 1rem;
+    }
+
+    .button-group {
+        gap: 15px;
+    }
+
+    button {
+        font-size: 0.95rem;
+        padding: 8px 20px;
+    }
+}
