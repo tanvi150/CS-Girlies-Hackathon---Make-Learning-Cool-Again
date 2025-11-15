@@ -1,1 +1,1 @@
-# CS-Girlies-Hackathon---Make-Learning-Cool-Again
+# CS Girlies Hackathon- Make Learning Cool Again!
