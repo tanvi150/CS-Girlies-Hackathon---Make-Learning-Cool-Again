@@ -1,0 +1,41 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#map{
+    height: 80vh;
+    width: 100%;
+}
+
+#progressBtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    background: #6366F1;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#progressBtn:hover{
+    background: #4F46E5;
+}
+
+@media screen and (min-width: 1024px) and (max-width:1600px) {
+    #map{
+        height: 70vh;
+    }
+
+    #progressBtn{
+        top: 15px;
+        right: 15px;
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+    
+}
