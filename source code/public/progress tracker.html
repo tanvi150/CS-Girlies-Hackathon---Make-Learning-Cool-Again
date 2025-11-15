@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Progress Tracker</title>
+  <style>
+    body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+  overflow: hidden;
+
+  /* 🌌 Neon Dark Gradient Background */
+  background: linear-gradient(135deg, #e6e4ff 0%, #d6d4ff 35%, #c8ccff 65%, #b9c9ff 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Soft World Map Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png')
+             center/cover no-repeat;
+  opacity: 0.06; 
+  z-index: 0;
+}
+
+   
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  z-index: 2;
+}
+
+/* Base horizontal line */
+.line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Animated glowing progress fill */
+.line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #8b5cf6, #6366f1, #0ea5e9, #22d3ee);
+  border-radius: 10px;
+  transition: width 0.9s ease-in-out;
+}
+
+.milestone {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.milestone:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* circle */
+.circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #c9d6ff;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+/* glowing circle */
+.milestone.completed .circle {
+  background: radial-gradient(circle, #8b5cf6, #0ea5e9);
+  border-color: #22d3ee;
+  box-shadow:
+    0 0 15px #8b5cf6,
+    0 0 30px #0ea5e9,
+    0 0 45px rgba(14, 165, 233, 0.5);
+  transform: scale(1.2);
+}
+/* Frosted glass level boxes */
+.label {
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255,255,255,0.32);
+  border-radius: 12px;
+  padding: 8px 6px;
+  font-size: 0.85rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  color: #f0f4ff;
+  transition: all 0.3s ease;
+}
+
+/* Zigzag layout */
+.milestone:nth-child(odd) .label { top: -80px; }
+.milestone:nth-child(even) .label { top: 45px; }
+
+/* Date text */
+.label span {
+  display: block;
+  font-size: 0.75rem;
+  color: #d8e7ff;
+}
+
+/* box glow */
+.milestone.completed .label {
+  border-color: #22d3ee;
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(14, 165, 233, 0.5);
+}
+
+
+/* Responsive */
+@media (max-width: 700px) {
+  .timeline { flex-direction: column; height: 600px; }
+  .line { width: 5px; height: 90%; left: 50%; top: 5%; }
+  .milestone { flex-direction: row; width: auto; }
+  .milestone:nth-child(odd) .label { left: -160px; top: 0; }
+  .milestone:nth-child(even) .label { left: 40px; top: 0; }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="timeline">
+    <div class="line"></div>
+
+    <div class="milestone" data-level="1">
+      <div class="circle"></div>
+      <div class="label">Level 1<br><span class="date">Not Played</span><br><span class="pdf-name"></span></div>
+    </div>
+
+    <div class="milestone" data-level="2">
+      <div class="circle"></div>
+      <div class="label">Level 2<br><span class="date">Not Played</span><br><span class="pdf-name"></span></div>
+    </div>
+
+    <div class="milestone" data-level="3">
+      <div class="circle"></div>
+      <div class="label">Level 3<br><span class="date">Not Played</span><br><span class="pdf-name"></span></div>
+    </div>
+
+    <div class="milestone" data-level="4">
+      <div class="circle"></div>
+      <div class="label">Level 4<br><span class="date">Not Played</span><br><span class="pdf-name"></span></div>
+    </div>
+
+    <div class="milestone" data-level="5">
+      <div class="circle"></div>
+      <div class="label">Level 5<br><span class="date">Not Played</span><br><span class="pdf-name"></span></div>
+    </div>
+
+    <div class="milestone" data-level="6">
+      <div class="circle"></div>
+      <div class="label">Level 6<br><span class="date">Not Played</span><br><span class="pdf-name"></span></div>
+    </div>
+  </div>
+
+  <script>
+    /*document.querySelectorAll(".milestone").forEach(milestone => {
+    milestone.addEventListener("click", () => {
+        // If already completed, do nothing
+        if (milestone.classList.contains("completed")) return;
+
+        // Mark as completed
+        milestone.classList.add("completed");
+
+        const dateEl = milestone.querySelector(".date");
+        const now = new Date();
+        dateEl.textContent = now.toLocaleDateString();
+
+        // Optional: display PDF name if stored
+        const pdfEl = milestone.querySelector(".pdf-name");
+        const progress = JSON.parse(localStorage.getItem("gameProgress")) || [];
+        const levelData = progress.find(p => p.level == milestone.dataset.level);
+        if (pdfEl && levelData && levelData.pdf) {
+            pdfEl.textContent = `📄 ${levelData.pdf}`;
+        }
+
+        saveProgress();
+    });
+});
+    // Save progress to localStorage
+    function saveProgress() {
+      const progress = [];
+      document.querySelectorAll(".milestone").forEach(ms => {
+        progress.push({
+          level: ms.dataset.level,
+          completed: ms.classList.contains("completed"),
+          date: ms.querySelector(".date").textContent
+        });
+      });
+      localStorage.setItem("gameProgress", JSON.stringify(progress));
+    }
+
+    // Load saved progress
+    function loadProgress() {
+      const saved = JSON.parse(localStorage.getItem("gameProgress"));
+      if (!saved) return;
+      saved.forEach(item => {
+        const ms = document.querySelector(`.milestone[data-level="${item.level}"]`);
+        if (ms && item.completed) {
+          ms.classList.add("completed");
+          ms.querySelector(".date").textContent = item.date;
+          const pdfEl = ms.querySelector(".pdf-name");
+          if (pdfEl) pdfEl.textContent = item.pdf ? ` ${item.pdf}` : "";
+        }
+      });
+    }
+
+  
+    
+
+    loadProgress();*/
+
+    // Function to mark a level as completed (call this only after actual gameplay)
+    function completeLevel(level, pdfName = "") {
+    const milestone = document.querySelector(`.milestone[data-level="${level}"]`);
+    if (!milestone || milestone.classList.contains("completed")) return;
+
+    milestone.classList.add("completed");
+    const dateEl = milestone.querySelector(".date");
+    const now = new Date();
+    dateEl.textContent = now.toLocaleDateString();
+
+    const pdfEl = milestone.querySelector(".pdf-name");
+    if (pdfEl && pdfName) {
+        pdfEl.textContent = pdfName; // Removed the 📄 emoji
+    }
+
+    saveProgress();
+}
+
+// Save progress to localStorage
+    function saveProgress() {
+    const progress = [];
+    document.querySelectorAll(".milestone").forEach(ms => {
+        progress.push({
+            level: ms.dataset.level,
+            completed: ms.classList.contains("completed"),
+            date: ms.querySelector(".date").textContent,
+            pdf: ms.querySelector(".pdf-name")?.textContent || ""
+        });
+    });
+    localStorage.setItem("gameProgress", JSON.stringify(progress));
+}
+
+// Load saved progress
+function loadProgress() {
+    const saved = JSON.parse(localStorage.getItem("gameProgress"));
+    if (!saved) return;
+
+    saved.forEach(item => {
+        if (item.completed) {
+            completeLevel(item.level, item.pdf); // pass plain text
+            document.querySelector(`.milestone[data-level="${item.level}"] .date`).textContent = item.date;
+        }
+    });
+}
+
+// Load progress on page load
+loadProgress();
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  background-color: #343b88;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr; 
+  height: 100vh;
+}
+
+
+.game-section {
+  background-color: #a2a9ff;
+  border-bottom: 5px solid #34997b;
+  position: relative;
+}
+
+
+.quiz-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  background-color: #95b1ff;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Left side: quiz */
+.quiz-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-area {
+  background-color: #d8dcff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.answers button {
+  background-color: #f7f8ff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.answers button:hover {
+  background-color: #c8d3ff;
+}
+
+
+.quiz-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.quote {
+  position: relative;
+  background: #5c6df0;
+  color: white;
+  border-radius: 50%;
+  padding: 40px;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 40px;
+  width: 20px;
+  height: 20px;
+  background: #5c6df0;
+  border-radius: 50%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons button {
+  background-color: #4b0071;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.buttons button:hover {
+  background-color: #6a00a8;
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  .container{
+    grid-template-rows: 1fr 1.2fr;
+  }
+
+  .quiz-section{
+    grid-template-columns: 3fr 1fr;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .question-area{
+    width: 100%;
+    padding: 15px;
+  }
+
+  .answers button{
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .quiz-right{
+    gap: 20px;
+  }
+
+  .quote{
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+  }
+
+  .quote::after{
+    width: 15px;
+    height: 15px;
+    bottom: -15px;
+    right: 30px;
+  }
+
+  .buttons button{
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .game-section{
+    height: 60vh;
+  }
+}
