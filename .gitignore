@@ -7,4 +7,5 @@ node_modules/
 # pdf uploads
 uploads/
 
+# macOS system file
 .DS_Store
