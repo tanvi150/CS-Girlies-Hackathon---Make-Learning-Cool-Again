@@ -1,0 +1,10 @@
+# Backend & Node
+node_modules/
+
+# dotnet
+.env
+
+# pdf uploads
+uploads/
+
+.DS_Store
