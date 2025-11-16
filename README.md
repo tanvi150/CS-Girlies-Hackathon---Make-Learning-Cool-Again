@@ -23,7 +23,7 @@ We're here to make learning fun again - turn any topic into an interactive quiz 
 - Currently, only **United Kingdom** is unlocked, but more countries are coming soon!
 
 ## Full Guide
-For detailed instructions, check our Gitbook: [Jigsaw Guide](LINK HERE)
+For detailed instructions, check our Gitbook: [Jigsaw Guide](https://hackathon.gitbook.io/gitbook-document/22JSivbTqtpGzRfAc2yY/)
 
 ## Tech Stack
 **Frontend**: HTML, CSS and JavaScript
