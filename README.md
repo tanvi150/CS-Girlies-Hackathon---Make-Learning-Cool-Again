@@ -27,8 +27,11 @@ For detailed instructions, check our Gitbook: [Jigsaw Guide](https://hackathon.g
 
 ## Tech Stack
 **Frontend**: HTML, CSS and JavaScript
+
 **Backend**: Node.js and Express.js
+
 **Libraries & Tools**: jsPDF, pdf-parse, multer, cors, dotenv, OpenRouter AI, leaflet.js
+
 **Deployment**: Render
 
 Made with ❤️ by Team JAT
