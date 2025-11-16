@@ -32,4 +32,5 @@ For detailed instructions, check our Gitbook: [Jigsaw Guide](https://hackathon.g
 **Deployment**: Render
 
 Made with ❤️ by Team JAT
+
 CS Girlies Fall Hackathon 2025!
