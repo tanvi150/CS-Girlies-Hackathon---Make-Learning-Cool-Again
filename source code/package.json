@@ -1,7 +1,7 @@
 {
   "name": "cs-girlies-hackathon",
   "version": "1.0.0",
-  "main": "game.js",
+  "main": "server.js",
   "directories": {
     "lib": "lib"
   },
