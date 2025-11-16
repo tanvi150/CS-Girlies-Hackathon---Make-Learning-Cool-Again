@@ -36,7 +36,7 @@ For a visual demonstration, check out the video: [Jigsaw Demo](https://youtu.be/
 
 **Deployment**: Render
 
-### Our Devpost
+## Our Devpost
 
 Check out our project on Devpost: https://devpost.com/software/jigsaw-khy8sa
 
