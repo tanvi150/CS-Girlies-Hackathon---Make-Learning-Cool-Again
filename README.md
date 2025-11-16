@@ -32,7 +32,7 @@ For a visual demonstration, check out the video: [Jigsaw Demo](https://youtu.be/
 
 **Backend**: Node.js and Express.js
 
-**Libraries & Tools**: jsPDF, pdf-parse, multer, cors, dotenv, OpenRouter AI, leaflet.js
+**Libraries & Tools**: jsPDF, pdf-parse, multer, cors, dotenv, OpenRouter AI, leaflet.js, p5.js, p5.js Sound
 
 **Deployment**: Render
 
