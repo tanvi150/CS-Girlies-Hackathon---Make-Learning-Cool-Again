@@ -25,6 +25,8 @@ We're here to make learning fun again - turn any topic into an interactive quiz 
 ## Full Guide
 For detailed instructions, check our Gitbook: [Jigsaw Guide](https://hackathon.gitbook.io/gitbook-document/22JSivbTqtpGzRfAc2yY/)
 
+For a visual demonstration, check out the video: [Jigsaw Demo](https://youtu.be/845jQn9gGnQ)
+
 ## Tech Stack
 **Frontend**: HTML, CSS and JavaScript
 
