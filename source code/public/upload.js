@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch('https://jigsaw-fvei.onrender.com/upload', {
+            const response = await fetch('http://localhost:3000/upload', {
                 method: 'POST',
                 body: formData
             });
